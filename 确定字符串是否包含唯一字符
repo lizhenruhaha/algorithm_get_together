@@ -1,0 +1,13 @@
+# _*_coding: utf-8 _*_
+__author__ = 'anroy'
+__data__ = '2020-05 -20 :15:35'
+
+
+'''
+实现一个算法来识别一个字符串的字符是否是唯一的。
+'''
+
+def unique_num(string):
+    if string is None:
+        return False
+    return len(set(string)) == len(string)
