@@ -26,3 +26,34 @@ __init__的第一个参数是self,就是__new__()返回的实例
 __new__()必须有返回值,返回实例对象
 __init__()不需要返回值
 '''
+
+
+
+#装饰器实现单例模式
+
+class Single01(obj):
+  def __init__(self,cls):
+    self.cls=cls
+    self._instance=None
+  def __call__(self,*args):
+    if not self._instance:
+      self._instance=self._cls(*args)
+     return self._instance
+@Single01
+class P(obj):
+  def __init__(self,name):
+    self.name=name
+    
+    
+def single01(cls):
+	s=[]  //这里定义了一个私有列表，也可以声明一个变量，在wrap用关键字nonlocal去调用
+	def wrap(*args,**kwargs):
+		if not s:
+			s.append(cls(*args,**kwargs))
+		return s
+	return wrap
+ 
+@single01
+class A(object):
+	def __init__(self,name):
+		self.name = name
