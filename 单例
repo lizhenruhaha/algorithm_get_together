@@ -1,0 +1,10 @@
+class People:
+  __instance__=None
+   def __new__(cls,*args,**kwargs):
+    if cls.__instance__ is not None:
+      return cls._instance__
+    else:
+        cls.__instance__=obj.__new__(cls)
+        return cls.__instance__
+    def __init__(self,name):
+      self.name=name
