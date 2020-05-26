@@ -31,7 +31,7 @@ __init__()不需要返回值
 
 #装饰器实现单例模式
 
-class Single01(obj):
+class Single01(object):
   def __init__(self,cls):
     self.cls=cls
     self._instance=None
