@@ -37,7 +37,7 @@ class Single01(object):
     self._instance=None
   def __call__(self,*args):
     if not self._instance:
-      self._instance=self._cls(*args)
+      self._instance=self.cls(*args)
      return self._instance
 @Single01
 class P(obj):
