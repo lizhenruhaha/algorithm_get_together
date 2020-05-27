@@ -1,0 +1,22 @@
+# _*_coding: utf-8 _*_
+__author__ = 'anroy'
+__data__ = '2020-05 -26 :16:28'
+
+def is_palind(string1):
+  if len(string1)<2:
+      return True
+  if string1[0]!=string[-1]:
+      return False
+      
+ st=input('请输入一个字符串:')
+ if is_palind(st):
+    print(f'%s是回文字符串'%st)
+ else:
+    print(f'%s不是回文字符串'%st)
+    
+    
+    
+    '''
+    def is_palind(st):
+      return s==s[::-1]
+    '''
