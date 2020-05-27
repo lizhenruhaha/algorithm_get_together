@@ -1,0 +1,36 @@
+# _*_coding: utf-8 _*_
+__author__ = 'anroy'
+__data__ = '2020-05 -27 :8:49'
+
+# 函数
+
+def decorate(func):
+  def wraaper(a,b):
+    print('sdf',a,b)
+    return func(a,b)
+  return wraaper
+  
+@decorate
+def add_num(a,b):
+  return a+b
+  
+  
+  
+#类
+
+class People():
+  def __init__(self,func):
+    self.func=func
+   def __call__(self,*args,**kwargs):
+    print('开始')
+    name=self.func(*args).name
+    print(name)
+    print('完了')
+ 
+ @People
+ class Obj:
+  def __init__(self,name):
+    self.name=name
+    
+  
+
