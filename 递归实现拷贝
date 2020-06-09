@@ -1,0 +1,19 @@
+# _*_coding: utf-8 _*_
+__author__ = 'anroy'
+__data__ = '2020-05 -26 :9:50'
+
+
+
+from copy import deepcopy
+
+def deepcopy(obj):
+  mylist=[]
+  for item in obj:
+    if instance(item,list):
+      new=deepcopy(item)
+      mylist.append(new)
+    else:
+      mylist.append(item)
+  return mylist
+  
+  
