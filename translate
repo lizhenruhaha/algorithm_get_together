@@ -1,0 +1,17 @@
+# _*_coding: utf-8 _*_
+__author__ = 'anroy'
+__data__ = '2020-06 -12 :14:07'
+
+from translate import Translator
+def translate_content():
+    # 实现英文转中文
+    translator=Translator(to_lang='chinese')
+    translation=translator.translate('hello')
+    return translation
+def translate_content_en():
+    #中文转英文
+    translator=Translator(from_lang='chinese',to_lang='english')
+    translation=translator.translate('你好')
+    return translation
+print(translate_content())
+print(translate_content_en())
