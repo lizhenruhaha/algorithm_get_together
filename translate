@@ -13,5 +13,4 @@ def translate_content_en():
     translator=Translator(from_lang='chinese',to_lang='english')
     translation=translator.translate('你好')
     return translation
-print(translate_content())
-print(translate_content_en())
+
