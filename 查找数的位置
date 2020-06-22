@@ -1,0 +1,9 @@
+def find_num(list_num,num):
+  for i,item in enumerate(list_num):
+    if item==num:
+      return i
+  else:
+    return None
+    
+    
+    
